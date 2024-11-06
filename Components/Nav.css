@@ -1,0 +1,33 @@
+.cls-navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 170px;
+}
+.cls-nav-menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 60px;
+    font-size: 20px;
+}
+.cls-nav-menu li{
+    cursor: pointer;
+}
+.cls-nav-menu li:hover{
+    background: linear-gradient(140deg, #74ebd5, #acb6e5, #4e54c8);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.cls-contact-btn{
+    padding: 20px 40px;
+    border-radius: 50px;
+    background: linear-gradient(140deg, #74ebd5, #acb6e5, #4e54c8);
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.5s;
+}
+.cls-contact-btn:hover{
+    transform: scale(1.05);
+}

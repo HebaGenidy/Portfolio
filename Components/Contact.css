@@ -1,0 +1,104 @@
+.cls-contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    margin: 80px 170px;
+}
+.cls-contact-title{
+    position: relative;
+}
+.cls-contact-title h1{
+    padding: 0px 30px;
+    font-size: 80px;
+    font-weight: 600;
+}
+.cls-contact-title img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+.cls-contact-section{
+    display: flex;
+    gap: 150px;
+}
+.cls-contact-left{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.cls-contact-left h1{
+    font-size: 80px;
+    font-weight: 700;
+    background: linear-gradient(140deg, #388e7f, #acb6e5, #4e54c8);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.cls-contact-left p{
+    max-width: 490px;
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 35px;
+}
+.cls-contact-details{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: aliceblue;
+    font-size: 22px;
+}
+.cls-contact-detail{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.cls-contact-form{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+}
+.cls-contact-form label{
+    color: aliceblue;
+    font-size: 22px;
+    font-weight: 500;
+}
+.cls-contact-form input{
+    border: none;
+    width: 500px;
+    height: 78px;
+    padding-left: 20px;
+    border-radius: 4px;
+    background: #32323c;
+    color: #A0A0A0;
+    font-family: outfit;
+    font-size: 20px;
+}
+.cls-contact-form textarea{
+    width: 470px;
+    border: none;
+    padding: 25px;
+    border-radius: 4px;
+    background: #32323c;
+    color: #A0A0A0;
+    font-family: outfit;
+    font-size: 20px;
+}
+.cls-contact-submit{
+    border: none;
+    color: white;
+    border-radius: 50px;
+    background: linear-gradient(140deg, #388e7f, #acb6e5, #4e54c8);
+    font-size: 22px;
+    padding: 20px 30px;
+    margin-bottom: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.cls-contact-submit:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}

@@ -1,0 +1,42 @@
+.cls-my-work{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 80px 170px;
+}
+.my-work-title{
+    position: relative;
+}
+.my-work-title h1{
+    padding: 0px 30px;
+    font-size: 80px;
+    font-weight: 600;
+}
+.my-work-title img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+.my-work-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    width: 100%; 
+}
+
+.cls-my-work img {
+    width: 100%; 
+    object-fit: cover; 
+    border-radius: 10px; 
+    transition: 0.3s;
+    cursor: pointer;
+}
+.cls-my-work img:hover{
+    transform: scale(1.10);
+    border: 4px solid #5c62d6;
+    border-radius: 10px;
+    transform: 0.3s;
+}
