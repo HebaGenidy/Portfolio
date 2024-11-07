@@ -12,7 +12,7 @@ function MyWork() {
         {MyWorkData.map((work, index) => {
           return (
             <a key={index} href={work.w_link} target="_blank" rel="noopener noreferrer">
-              <img src={work.w_img} width={'80%'} alt={work.w_name} />
+              <img src={work.w_img} width={'80%'} alt={work.w_name} className={work.w_class || ''} />
             </a>
           );
         })}

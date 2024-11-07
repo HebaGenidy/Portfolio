@@ -28,7 +28,8 @@ const MyWorkData = [
         w_no: 4,
         w_name: "Web Design",
         w_img: image4,
-        w_link: "https://github.com/HebaGenidy/learning-system" 
+        w_link: "https://github.com/HebaGenidy/learning-system",
+        w_class: "special-image" 
     },
     {
         w_no: 5,
