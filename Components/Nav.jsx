@@ -1,19 +1,40 @@
-import React from 'react'
-import './Nav.css'
+import { useState } from 'react';
+import './Nav.css';
 
-function Navbar () {
+const Nav = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleNavClick = (event, targetId) => {
+    event.preventDefault(); // Prevent default anchor behavior
+    const targetElement = document.getElementById(targetId);
+    
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+      setIsMenuOpen(false); // Close the menu if open (for mobile views)
+    }
+  };
+
   return (
-    <div className='cls-navbar'>
-        <img src="" alt="" />
-        <ul className='cls-nav-menu'>
-            <li>Home</li>
-            <li>About Me</li>
-            <li>Services</li>
-            <li>Contact</li>
-        </ul>
-        <div className="cls-contact-btn">Connect With Me</div>
-    </div>
-  )
-}
+    <nav id="home" className="cls-navbar">
+      <h1 className="cls-logo">Heba.</h1>
+      <ul className={`cls-nav-menu ${isMenuOpen ? 'open' : ''}`}>
+        <li><a href="#home" onClick={(e) => handleNavClick(e, 'home')}>Home</a></li>
+        <li><a href="#about-carrots" onClick={(e) => handleNavClick(e, 'about-carrots')}>About</a></li>
+        <li><a href="#services" onClick={(e) => handleNavClick(e, 'services')}>Services</a></li>
+        <li><a href="#services" onClick={(e) => handleNavClick(e, 'Projects')}>Projects</a></li>
+        <li><a href="#contact" onClick={(e) => handleNavClick(e, 'contact')}>Contact</a></li>
+      </ul>
+      <div className="cls-hamburger" onClick={toggleMenu}>
+        <span className="bar"></span>
+        <span className="bar"></span>
+        <span className="bar"></span>
+      </div>
+    </nav>
+  );
+};
 
-export default Navbar;
+export default Nav;

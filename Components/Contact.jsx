@@ -23,7 +23,7 @@ function Contact() {
   };
 
   return (
-    <div className='cls-contact'>
+    <div id='contact' className='cls-contact'>
       <div className="cls-contact-title">
         <h1>Get in touch</h1>
         <img src="" alt="" />

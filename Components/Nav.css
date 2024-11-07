@@ -1,33 +1,118 @@
-.cls-navbar{
+/* Navbar container */
+.cls-navbar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin: 20px 170px;
+    justify-content: space-between; /* Align logo left, nav right */
+    padding: 20px 100px;
+    position: relative;
+    border-radius: 10px;
+/* Background color for better visibility */
 }
-.cls-nav-menu{
-    display: flex;
-    align-items: center;
-    list-style: none;
-    gap: 60px;
-    font-size: 20px;
-}
-.cls-nav-menu li{
+
+/* Logo styling */
+.cls-logo {
+    font-size: 5rem;
+    font-weight: bold;
     cursor: pointer;
-}
-.cls-nav-menu li:hover{
     background: linear-gradient(140deg, #74ebd5, #acb6e5, #4e54c8);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.cls-contact-btn{
-    padding: 20px 40px;
-    border-radius: 50px;
-    background: linear-gradient(140deg, #74ebd5, #acb6e5, #4e54c8);
-    cursor: pointer;
-    font-size: 15px;
-    transition: 0.5s;
+
+/* Nav menu styling for desktop */
+.cls-nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+    font-size: 1.9rem;
+    transition: transform 0.3s ease;
 }
-.cls-contact-btn:hover{
-    transform: scale(1.05);
+
+.cls-nav-menu li {
+    cursor: pointer;
+}
+
+.cls-nav-menu li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+.cls-nav-menu li a:hover {
+    color: transparent;
+    background: linear-gradient(140deg, #74ebd5, #acb6e5, #4e54c8);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Hamburger menu styling for mobile */
+.cls-hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+}
+
+.cls-hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+/* Rotate bars when open */
+.cls-hamburger.open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.cls-hamburger.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.cls-hamburger.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive Styles */
+@media (max-width: 800px) {
+    .cls-navbar {
+        padding: 20px;
+    }
+
+    /* Hide regular nav menu and show hamburger menu */
+    .cls-nav-menu {
+        display: none; /* Hide on mobile by default */
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background-color: rgba(7, 1, 1, 0.95);
+        width: 80%;
+        padding: 20px;
+        color: black;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        flex-direction: column;
+        gap: 15px;
+        z-index: 9;
+    }
+
+    .cls-nav-menu.open {
+        display: flex; /* Show on mobile when menu is toggled */
+    }
+
+    .cls-nav-menu li {
+        text-align: center;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .cls-hamburger {
+        display: flex; /* Show hamburger on small screens */
+    }
 }

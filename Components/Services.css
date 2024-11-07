@@ -1,70 +1,146 @@
-.cls-services{
+.cls-services {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 80px;
-    margin: 80px 170px;
+    padding: 20px;
+    margin: 80px 20px;
 }
-.cls-services-title{
+
+/* Title section */
+.cls-services-title {
     position: relative;
+    text-align: center;
 }
-.cls-services-title h1{
-    padding: 0px 30px;
-    font-size: 70px;
+
+.cls-services-title h1 {
+    padding: 0px 15px;
+    font-size: 3em;
     font-weight: 600;
 }
-.cls-services-title img{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
+
+/* Services container grid layout */
+.cls-services-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    max-width: 1500px;
+    margin-bottom: 100px;
 }
-.cls-services-format{
+
+/* Service card styling */
+.cls-services-format {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 20px;
-    padding: 60px;
+    gap: 30px;
+    padding: 40px;
     border-radius: 10px;
     border: 2px solid #fff;
     transition: 0.4s;
     cursor: pointer;
+    text-align: center;
 }
-.cls-services-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
-    margin-bottom: 80px;
 
-}
-.cls-services-format h3{
-    font-size: 28px;
+.cls-services-format h3 {
+    font-size: 2em;
     font-weight: 600;
 }
-.cls-services-format h2{
-    font-size: 27px;
+
+.cls-services-format h2 {
+    font-size: 2.5em;
     font-weight: 800;
     background: linear-gradient(140deg, #74ebd5, #acb6e5, #4e54c8);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.cls-services-format p{
+
+.cls-services-format p {
     color: #fff;
-    font-size: 25px;
-    line-height: 40px;
+    font-size: 1.5em;
+    line-height: 1.6em;
     max-width: 300px;
+    margin: auto;
 }
-.cls-services-read-more{
+
+.cls-services-read-more {
     display: flex;
-    gap: 20px;
+    gap: 10px;
     align-items: center;
+    justify-content: center;
     margin-top: 20px;
 }
-.cls-services-format:hover{
+
+.cls-services-format:hover {
     border: 3px solid #6d72d1;
     background: linear-gradient(140deg, #388e7f, #acb6e5, #4e54c8);
     transform: scale(1.05);
     transition: 0.4s;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+    .cls-services-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .cls-services-title h1 {
+        font-size: 3em;
+    }
+
+    .cls-services-format {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cls-services-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .cls-services-title h1 {
+        font-size: 3em;
+    }
+
+    .cls-services-format {
+        padding: 30px;
+    }
+
+    .cls-services-format h3,
+    .cls-services-format h2 {
+        font-size: 1.9em;
+    }
+
+    .cls-services-format p {
+        font-size: 1.5em;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .cls-services {
+        gap: 40px;
+    }
+
+    .cls-services-title h1 {
+        font-size: 2em;
+    }
+
+    .cls-services-format {
+        padding: 30px;
+    }
+
+    .cls-services-format h3,
+    .cls-services-format h2 {
+        font-size: 1.9em;
+    }
+
+    .cls-services-format p {
+        font-size: 1.3em;
+    }
 }

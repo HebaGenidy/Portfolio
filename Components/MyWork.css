@@ -1,42 +1,90 @@
-.cls-my-work{
+.cls-my-work {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 80px;
-    margin: 80px 170px;
-}
-.my-work-title{
-    position: relative;
-}
-.my-work-title h1{
-    padding: 0px 30px;
-    font-size: 80px;
-    font-weight: 600;
-}
-.my-work-title img{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-}
-.my-work-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 20px; 
-    width: 100%; 
+    padding: 20px;
+    margin: 80px 20px;
 }
 
+/* Title section */
+.my-work-title {
+    position: relative;
+    text-align: center;
+}
+
+.my-work-title h1 {
+    padding: 0px 15px;
+    font-size: 3em;
+    font-weight: 600;
+}
+
+/* Work container grid layout */
+.my-work-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 1500px;
+}
+
+/* Image styling within the grid */
 .cls-my-work img {
-    width: 100%; 
-    object-fit: cover; 
-    border-radius: 10px; 
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
     transition: 0.3s;
     cursor: pointer;
 }
-.cls-my-work img:hover{
+.my-work-container img[src*="imag4.png"] {
+
+    width: 100%; 
+    height: 100%;
+    object-fit: fill;
+}
+
+.cls-my-work img:hover {
     transform: scale(1.10);
     border: 4px solid #5c62d6;
-    border-radius: 10px;
-    transform: 0.3s;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+    .my-work-title h1 {
+        font-size: 2.5em;
+    }
+
+    .my-work-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .my-work-title h1 {
+        font-size: 2em;
+    }
+
+    .my-work-container {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+        gap: 15px;
+    }
+
+    .cls-my-work img {
+        border-radius: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cls-my-work {
+        gap: 40px;
+    }
+
+    .my-work-title h1 {
+        font-size: 1.8em;
+    }
+
+    .cls-my-work img {
+        border-radius: 5px;
+    }
 }

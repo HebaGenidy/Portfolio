@@ -1,34 +1,26 @@
-import React from 'react'
-import './Footer.css'
-import { FaUser } from 'react-icons/fa';
+import React from 'react';
+import { FaGithub, FaLinkedinIn, FaEnvelope } from 'react-icons/fa';
+import './Footer.css';
 
-function Footer() {
-  return (
-    <div className='cls-footer'>
-        <div className="cls-footer-top">
-            <div className="cls-footer-top-left">
-                <img src="" alt="" />
-                <p>I'm frontend developer from Egypt ,with 1 year of experience.</p>
+const Footer = () => {
+    return (
+        <footer id='services' className="cls-footer">
+            <div className="cls-footer-left">
+                &copy; 2024 Heba Mohamed. All rights reserved.
             </div>
-            <div className="cls-footer-top-right">
-                <div className="cls-footer-email-input">
-                    <FaUser size={30} />
-                    <input type="email" name="email" placeholder='Enter Your Email'/>
-                </div>
-                <div className="cls-footer-subscribe">Subscribe</div>
+            <div className="cls-footer-right">
+                <a href="https://github.com/HebaGenidy" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <FaGithub />
+                </a>
+                <a href="https://linkedin.com/in/heba-mohamed-a60b42334" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <FaLinkedinIn />
+                </a>
+                <a href="heba.mohamed@btu.edu.eg" aria-label="Email">
+                    <FaEnvelope />
+                </a>
             </div>
-        </div>
-        <hr />
-        <div className="cls-footer-bottom">
-            <p className='cls-footer-bottom-left'>Made With Love By Heba Mohamed Sayed &copy; 2024</p>
-        <div className="cls-footer-bottom-right">
-            <p>Term of Services</p>
-            <p>Privacy Policy</p>
-            <p>Connect with Me</p>
-        </div>
-        </div>
-    </div>
-  )
-}
+        </footer>
+    );
+};
 
 export default Footer;

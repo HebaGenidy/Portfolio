@@ -1,14 +1,14 @@
-import React from 'react'
+import 'react'
 import './About.css'
 
 function About() {
   return (
-    <div className='cls-about'>
+    <div id="about-carrots" className='cls-about'>
         <div className="cls-about-title">
             <h1>About Me</h1>
             <img src="" alt="" />
         </div>
-        <div className="cls-about-section">
+        <div  className="cls-about-section">
             <div className="cls-about-left">
                 <img src="" alt="" />
             </div>
@@ -37,13 +37,13 @@ function About() {
                         <p>Java</p><hr style={{width:"80%"}}/>
                     </div>
                     <div className="cls-about-skill">
-                        <p>Node js</p><hr style={{width:"80%"}}/>
+                        <p>Node js</p><hr style={{width:"40%"}}/>
                     </div>
                     <div className="cls-about-skill">
-                        <p>Tailwind Css</p><hr style={{width:"90%"}}/>
+                        <p>Tailwind Css</p><hr style={{width:"70%"}}/>
                     </div>
                     <div className="cls-about-skill">
-                        <p>Mongos</p><hr style={{width:"70%"}}/>
+                        <p>Mongos</p><hr style={{width:"40%"}}/>
                     </div>
                 </div>
                 <div className="cls-about-achievements">
