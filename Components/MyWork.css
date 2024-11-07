@@ -37,11 +37,10 @@
     transition: 0.3s;
     cursor: pointer;
 }
-.my-work-container img[src*="/src/assets/imag4.png"] {
-
-    width: 100%; 
+.special-image {
+    object-fit: fill; 
+    width: 100%;
     height: 100%;
-    object-fit: fill;
 }
 
 .cls-my-work img:hover {
